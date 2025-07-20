@@ -1,11 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <queue>
-#include <stack>
-#include <algorithm>
-#include <map>
-#include <cstring>
-#include <cmath>
 using namespace std;
 void it(){
     cin.tie(0);cout.tie(0);
@@ -25,11 +19,8 @@ void f(int a, int b){
         return;
     }
     for(int i = b; i < n; i++){
-        if(vis[i]) continue;
-        vis[i] = 1;
         v.push_back(arr[i]);
         f(a - 1, i + 1);
-        vis[i] = 0;
         v.pop_back();
     }
 }
